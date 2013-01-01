@@ -74,7 +74,7 @@ WIFI_DRIVER_MODULE_ARG           := ""
 WIFI_BAND                        := 802_11_ABG
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+BOARD_CUSTOM_RECOVERY_EVENTS := ../../../$(LOCAL_PATH)/recovery/events.c
 TARGET_RECOVERY_PRE_COMMAND := "echo -n boot-recovery | busybox dd of=/dev/block/mtdblock0 count=1 conv=sync; sync"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
