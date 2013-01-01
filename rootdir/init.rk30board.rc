@@ -44,6 +44,9 @@ on init
     symlink /etc/bluez/bcm432x/BCM4329B1_002.002.023.0389.0000_Cybertan-Foxconn_Cls2_extLNA_EDRmaxInputLev+PeakDEVM_NT.hcd /bcm4329_cybertan.hcd
 
 on boot
+    # adb mode
+    write /sys/bus/platform/drivers/usb20_otg/force_usb_mode 2
+
     mount debugfs /sys/kernel/debug /sys/kernel/debug
     chown system system /sys/devices/system/cpu/cpu1/online
     chmod 0660 /sys/devices/system/cpu/cpu1/online

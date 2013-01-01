@@ -33,6 +33,9 @@ on init
     write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/iSerial ${ro.serialno}
 
+    # adb mode
+    write /sys/bus/platform/drivers/usb20_otg/force_usb_mode 2
+
     insmod /rk30xxnand_ko.ko
 
 on boot
