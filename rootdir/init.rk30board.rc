@@ -21,7 +21,7 @@ on early-init
     symlink /storage/sdcard1 /mnt/extSdCard
 
 on fs
-    insmod /rk30xxnand_ko.ko
+    insmod /rk30xxnand.ko
 
     mount ext4 mtd@system /system wait ro noatime nodiratime noauto_da_alloc
     mount ext4 mtd@userdata /data wait noatime nodiratime nosuid nodev noauto_da_alloc
@@ -30,7 +30,7 @@ on fs
     insmod /system/lib/modules/ump.ko
     insmod /system/lib/modules/mali.ko mali_dvfs=50,100,133,160,200,266,400 mali_init_clock=50
     insmod /system/lib/modules/rk29-ipp.ko 
-    insmod /system/lib/modules/rk30_mirroring_3.0.8+.ko
+    insmod /system/lib/modules/rk30_mirroring.ko
 
 on post-fs-data
     mkdir /data/misc/ppp 777 system system

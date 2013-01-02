@@ -36,7 +36,7 @@ on init
     # adb mode
     write /sys/bus/platform/drivers/usb20_otg/force_usb_mode 2
 
-    insmod /rk30xxnand_ko.ko
+    insmod /rk30xxnand.ko
 
 on boot
 

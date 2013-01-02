@@ -70,29 +70,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Kernel modules
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/modules/rk30xxnand_ko.ko.3.0.8+:root/rk30xxnand_ko.ko.3.0.8+ \
-    $(LOCAL_PATH)/modules/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko.3.0.36+ \
-    $(LOCAL_PATH)/modules/rk30xxnand_ko.ko.3.0.8+:recovery/root/rk30xxnand_ko.ko.3.0.8+ \
-    $(LOCAL_PATH)/modules/rk30xxnand_ko.ko.3.0.36+:recovery/root/rk30xxnand_ko.ko.3.0.36+
+    $(LOCAL_PATH)/modules/rk30xxnand.ko:root/rk30xxnand.ko \
+    $(LOCAL_PATH)/modules/rk30xxnand.ko:recovery/root/rk30xxnand.ko
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/modules/8188eu.ko:system/lib/modules/8188eu.ko \
-    $(LOCAL_PATH)/modules/8188eu.ko.3.0.36+:system/lib/modules/8188eu.ko.3.0.36+ \
     $(LOCAL_PATH)/modules/8192cu.ko:system/lib/modules/8192cu.ko \
-    $(LOCAL_PATH)/modules/8192cu.ko.3.0.36+:system/lib/modules/8192cu.ko.3.0.36+ \
     $(LOCAL_PATH)/modules/mali.ko:system/lib/modules/mali.ko \
-    $(LOCAL_PATH)/modules/mali.ko.3.0.36+:system/lib/modules/mali.ko.3.0.36+ \
     $(LOCAL_PATH)/modules/rk29-ipp.ko:system/lib/modules/rk29-ipp.ko \
-    $(LOCAL_PATH)/modules/rk29-ipp.ko.3.0.36+:system/lib/modules/rk29-ipp.ko.3.0.36+ \
-    $(LOCAL_PATH)/modules/rk30_mirroring_3.0.8+.ko:system/lib/modules/rk30_mirroring_3.0.8+.ko \
+    $(LOCAL_PATH)/modules/rk30_mirroring.ko:system/lib/modules/rk30_mirroring.ko \
     $(LOCAL_PATH)/modules/rkwifi.ko:system/lib/modules/rkwifi.ko \
-    $(LOCAL_PATH)/modules/rkwifi.ko.3.0.36+:system/lib/modules/rkwifi.ko.3.0.36+ \
     $(LOCAL_PATH)/modules/ump.ko:system/lib/modules/ump.ko \
-    $(LOCAL_PATH)/modules/ump.ko.3.0.36+:system/lib/modules/ump.ko.3.0.36+ \
     $(LOCAL_PATH)/modules/vpu_service.ko:system/lib/modules/vpu_service.ko \
-    $(LOCAL_PATH)/modules/vpu_service.ko.3.0.36+:system/lib/modules/vpu_service.ko.3.0.36+ \
-    $(LOCAL_PATH)/modules/wlan.ko:system/lib/modules/wlan.ko \
-    $(LOCAL_PATH)/modules/wlan.ko.3.0.36+:system/lib/modules/wlan.ko.3.0.36+
+    $(LOCAL_PATH)/modules/wlan.ko:system/lib/modules/wlan.ko
 
 # Packages
 PRODUCT_PACKAGES := \
