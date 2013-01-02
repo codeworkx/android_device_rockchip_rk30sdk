@@ -158,7 +158,7 @@ $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=mass_storage
 
 # Use the non-open-source parts, if they're present
 $(call inherit-product-if-exists, vendor/rockchip/rk30sdk/rk30sdk-vendor.mk)
