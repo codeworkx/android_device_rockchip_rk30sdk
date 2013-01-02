@@ -75,7 +75,7 @@ WIFI_BAND                        := 802_11_ABG
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_EVENTS := ../../../$(LOCAL_PATH)/recovery/events.c
-TARGET_RECOVERY_PRE_COMMAND := "echo -n boot-recovery | busybox dd of=/dev/block/mtdblock0 count=1 conv=sync; sync"
+TARGET_RECOVERY_PRE_COMMAND := "echo -n boot-recovery | busybox dd of=/dev/block/mtdblock1 count=1 conv=sync; sync"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
