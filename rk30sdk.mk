@@ -38,8 +38,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/ueventd.rk30board.rc:root/ueventd.rk30board.rc
 
 # Recovery-Ramdisk
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
 # Audio
 PRODUCT_COPY_FILES += \
