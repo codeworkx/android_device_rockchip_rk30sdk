@@ -38,6 +38,11 @@ on post-fs-data
     copy /etc/ppp/pap-secrets /data/misc/ppp/pap-secrets
     copy /etc/ppp/pppoe.conf /data/misc/ppp/pppoe.conf
 
+    # create dalvik-cache and double-check the perms, so as to enforce our permissions
+    mkdir /cache/dalvik-cache 0771 system system
+    chown system system /cache/dalvik-cache
+    chmod 0771 /cache/dalvik-cache
+
 on init
     symlink /etc/bluez/bcm432x/BCM4329B1_TestOnly_0237_26MHz_SEMCO_B23.hcd /bcm4329_samsung.hcd
     symlink /etc/bluez/bcm432x/BCM4329B1_USI_WM-BN-BM-01.hcd /bcm4329_usi.hcd
