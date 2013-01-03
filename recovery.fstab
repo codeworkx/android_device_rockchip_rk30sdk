@@ -11,4 +11,4 @@
 /system            ext4      /dev/block/mtdblock9
 /emmc              vfat      /dev/block/mtdblock10
 
-/sdcard            vfat      /dev/block/mmcblk0         /dev/block/mmcblk0p1
+/sdcard            vfat      /dev/block/mmcblk0p1       /dev/block/mmcblk0

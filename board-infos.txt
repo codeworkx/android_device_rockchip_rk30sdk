@@ -1,0 +1,26 @@
+179        0    1966080 mmcblk0
+179        1    1965952 mmcblk0p1
+
+ 31        0       4096 mtdblock0  parameter
+ 31        1       4096 mtdblock1  misc
+ 31        2       8192 mtdblock2  kernel
+ 31        3      16384 mtdblock3  boot
+ 31        4      16384 mtdblock4  recovery
+ 31        5     393216 mtdblock5  backup
+ 31        6     131072 mtdblock6  cache
+ 31        7     524288 mtdblock7  userdata    
+ 31        8       4096 mtdblock8  kpanic
+ 31        9     524288 mtdblock9  system
+ 31       10    2211840 mtdblock10 user
+  
+0x000000000000-0x000000400000 : "parameter"
+0x000000400000-0x000000800000 : "misc"
+0x000000800000-0x000001000000 : "kernel"
+0x000001000000-0x000002000000 : "boot"
+0x000002000000-0x000003000000 : "recovery"
+0x000003000000-0x00001b000000 : "backup"
+0x00001b000000-0x000023000000 : "cache"
+0x000023000000-0x000043000000 : "userdata"
+0x000043000000-0x000043400000 : "kpanic"
+0x000043400000-0x000063400000 : "system"
+0x000067400000-0x0000ee400000 : "user"
