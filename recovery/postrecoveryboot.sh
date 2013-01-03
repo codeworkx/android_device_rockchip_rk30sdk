@@ -1,2 +1,2 @@
 #!/sbin/sh
-dd if=/dev/zero of=/dev/block/mtdblock0
+dd if=/dev/zero of=/dev/block/mtdblock1

@@ -28,9 +28,9 @@ on init
 on fs
     insmod /rk30xxnand.ko
 
-    mount ext4 /dev/block/mtdblock8 /system wait ro noatime nodiratime noauto_da_alloc
-    mount ext4 /dev/block/mtdblock6 /data wait noatime nodiratime nosuid nodev noauto_da_alloc
-    mount ext4 /dev/block/mtdblock5 /cache wait noatime nodiratime nosuid nodev noauto_da_alloc
+    mount ext4 /dev/block/mtdblock9 /system wait ro noatime nodiratime noauto_da_alloc
+    mount ext4 /dev/block/mtdblock7 /data wait noatime nodiratime nosuid nodev noauto_da_alloc
+    mount ext4 /dev/block/mtdblock6 /cache wait noatime nodiratime nosuid nodev noauto_da_alloc
 
     insmod /system/lib/modules/ump.ko
     insmod /system/lib/modules/mali.ko mali_dvfs=50,100,133,160,200,266,400 mali_init_clock=50
