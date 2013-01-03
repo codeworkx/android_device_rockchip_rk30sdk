@@ -69,20 +69,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.supplicant_scan_interval=15
 
 # Kernel modules
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/modules/rk30xxnand.ko:root/rk30xxnand.ko \
-    $(LOCAL_PATH)/modules/rk30xxnand.ko:recovery/root/rk30xxnand.ko
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/modules/rk30xxnand.ko:root/rk30xxnand.ko \
+#    $(LOCAL_PATH)/modules/rk30xxnand.ko:recovery/root/rk30xxnand.ko
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/modules/8188eu.ko:system/lib/modules/8188eu.ko \
-    $(LOCAL_PATH)/modules/8192cu.ko:system/lib/modules/8192cu.ko \
-    $(LOCAL_PATH)/modules/mali.ko:system/lib/modules/mali.ko \
-    $(LOCAL_PATH)/modules/rk29-ipp.ko:system/lib/modules/rk29-ipp.ko \
-    $(LOCAL_PATH)/modules/rk30_mirroring.ko:system/lib/modules/rk30_mirroring.ko \
-    $(LOCAL_PATH)/modules/rkwifi.ko:system/lib/modules/rkwifi.ko \
-    $(LOCAL_PATH)/modules/ump.ko:system/lib/modules/ump.ko \
-    $(LOCAL_PATH)/modules/vpu_service.ko:system/lib/modules/vpu_service.ko \
-    $(LOCAL_PATH)/modules/wlan.ko:system/lib/modules/wlan.ko
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/modules/8188eu.ko:system/lib/modules/8188eu.ko \
+#    $(LOCAL_PATH)/modules/8192cu.ko:system/lib/modules/8192cu.ko \
+#    $(LOCAL_PATH)/modules/mali.ko:system/lib/modules/mali.ko \
+#    $(LOCAL_PATH)/modules/rk29-ipp.ko:system/lib/modules/rk29-ipp.ko \
+#    $(LOCAL_PATH)/modules/rk30_mirroring.ko:system/lib/modules/rk30_mirroring.ko \
+#    $(LOCAL_PATH)/modules/rkwifi.ko:system/lib/modules/rkwifi.ko \
+#    $(LOCAL_PATH)/modules/ump.ko:system/lib/modules/ump.ko \
+#    $(LOCAL_PATH)/modules/vpu_service.ko:system/lib/modules/vpu_service.ko \
+#    $(LOCAL_PATH)/modules/wlan.ko:system/lib/modules/wlan.ko
 
 # Packages
 PRODUCT_PACKAGES := \
@@ -113,14 +113,14 @@ PRODUCT_PACKAGES += \
     librs_jni
 
 # Prebuilt kernel
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+#else
+#	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_KERNEL):kernel
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \

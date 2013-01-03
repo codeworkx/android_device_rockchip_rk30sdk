@@ -35,7 +35,10 @@ BOARD_KERNEL_BASE := 0x60400000
 BOARD_KERNEL_PAGESIZE := 16384
 BOARD_FORCE_RAMDISK_ADDRESS := 0x62000000
 
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
+TARGET_KERNEL_SOURCE := kernel/rockchip/rk30xx
+TARGET_KERNEL_CONFIG := cyanogenmod_rk30sdk_defconfig
+#TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
+
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/custombootimg.mk
 
 TARGET_PROVIDES_INIT_TARGET_RC := true
@@ -75,11 +78,7 @@ BOARD_HOSTAPD_DRIVER             := WEXT
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_rtl
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/wlan.ko"
-WIFI_DRIVER_FW_PATH_STA          := ""
-WIFI_DRIVER_FW_PATH_AP           := ""
-WIFI_DRIVER_FW_PATH_P2P          := ""
 WIFI_DRIVER_MODULE_NAME          := "wlan"
-WIFI_DRIVER_MODULE_ARG           := ""
 WIFI_BAND                        := 802_11_ABG
 
 # Recovery
