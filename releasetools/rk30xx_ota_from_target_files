@@ -79,7 +79,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   symlinks = CopySystemFiles(input_zip, output_zip)
   script.MakeSymlinks(symlinks)
 
-  CopyBootFiles(input_zip, output_zip)
+  #CopyBootFiles(input_zip, output_zip)
 
   Item.GetMetadata(input_zip)
   Item.Get("system").SetPermissions(script)
@@ -91,7 +91,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
     script.RunBackup("restore")
 
   script.ShowProgress(0.2, 10)
-  script.EMMCWriteRawImage("/dev/block/mtdblock3", "boot.img")
+  #script.EMMCWriteRawImage("/dev/block/mtdblock3", "boot.img")
 
   script.ShowProgress(0.1, 0)
   device_specific.FullOTA_InstallEnd()
