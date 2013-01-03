@@ -20,33 +20,34 @@ on early-init
     symlink /storage/sdcard1 /extSdCard
     symlink /storage/sdcard1 /mnt/extSdCard
 
+on init
+    symlink /etc/bluez/bcm432x/BCM4329B1_TestOnly_0237_26MHz_SEMCO_B23.hcd /bcm4329_samsung.hcd
+    symlink /etc/bluez/bcm432x/BCM4329B1_USI_WM-BN-BM-01.hcd /bcm4329_usi.hcd
+    symlink /etc/bluez/bcm432x/BCM4329B1_002.002.023.0389.0000_Cybertan-Foxconn_Cls2_extLNA_EDRmaxInputLev+PeakDEVM_NT.hcd /bcm4329_cybertan.hcd
+
 on fs
     insmod /rk30xxnand.ko
 
-    mount ext4 mtd@system /system wait ro noatime nodiratime noauto_da_alloc
-    mount ext4 mtd@userdata /data wait noatime nodiratime nosuid nodev noauto_da_alloc
-    mount ext4 mtd@cache /cache wait noatime nodiratime nosuid nodev noauto_da_alloc
+    mount ext4 /dev/block/mtdblock8 /system wait ro noatime nodiratime noauto_da_alloc
+    mount ext4 /dev/block/mtdblock6 /data wait noatime nodiratime nosuid nodev noauto_da_alloc
+    mount ext4 /dev/block/mtdblock5 /cache wait noatime nodiratime nosuid nodev noauto_da_alloc
 
     insmod /system/lib/modules/ump.ko
     insmod /system/lib/modules/mali.ko mali_dvfs=50,100,133,160,200,266,400 mali_init_clock=50
     insmod /system/lib/modules/rk29-ipp.ko 
     insmod /system/lib/modules/rk30_mirroring.ko
 
-on post-fs-data
-    mkdir /data/misc/ppp 777 system system
-    chmod 777 /data/misc/ppp
-    copy /etc/ppp/pap-secrets /data/misc/ppp/pap-secrets
-    copy /etc/ppp/pppoe.conf /data/misc/ppp/pppoe.conf
-
+on post-fs
     # create dalvik-cache and double-check the perms, so as to enforce our permissions
     mkdir /cache/dalvik-cache 0771 system system
     chown system system /cache/dalvik-cache
     chmod 0771 /cache/dalvik-cache
 
-on init
-    symlink /etc/bluez/bcm432x/BCM4329B1_TestOnly_0237_26MHz_SEMCO_B23.hcd /bcm4329_samsung.hcd
-    symlink /etc/bluez/bcm432x/BCM4329B1_USI_WM-BN-BM-01.hcd /bcm4329_usi.hcd
-    symlink /etc/bluez/bcm432x/BCM4329B1_002.002.023.0389.0000_Cybertan-Foxconn_Cls2_extLNA_EDRmaxInputLev+PeakDEVM_NT.hcd /bcm4329_cybertan.hcd
+on post-fs-data
+    mkdir /data/misc/ppp 777 system system
+    chmod 777 /data/misc/ppp
+    copy /etc/ppp/pap-secrets /data/misc/ppp/pap-secrets
+    copy /etc/ppp/pppoe.conf /data/misc/ppp/pppoe.conf
 
 on boot
     # adb mode
@@ -164,8 +165,8 @@ service iprenew_p2p system/bin/dhcpcd -n
 
 service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
     class main
-	disabled
-	oneshot
+    disabled
+    oneshot
 			
 service iprenew_eth0 system/bin/dhcpcd -n
     class main
