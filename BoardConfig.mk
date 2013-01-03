@@ -63,7 +63,12 @@ BOARD_USES_HWCOMPOSER := true
 USE_CAMERA_STUB := true
 
 # Wifi
+BOARD_WIFI_VENDOR                := realtek
 BOARD_WLAN_DEVICE                := rtl8188eu
+BOARD_WPA_SUPPLICANT_DRIVER      := WEXT
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_rtl
+BOARD_HOSTAPD_DRIVER             := WEXT
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_rtl
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_FW_PATH_STA          := ""
