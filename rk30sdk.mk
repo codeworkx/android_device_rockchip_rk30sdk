@@ -69,9 +69,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.supplicant_scan_interval=15
 
 # Kernel modules
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/modules/rk30xxnand.ko:root/rk30xxnand.ko \
-#    $(LOCAL_PATH)/modules/rk30xxnand.ko:recovery/root/rk30xxnand.ko
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/modules/rk30xxnand.ko:root/rk30xxnand.ko \
+    $(LOCAL_PATH)/modules/rk30xxnand.ko:recovery/root/rk30xxnand.ko
 
 #PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/modules/8188eu.ko:system/lib/modules/8188eu.ko \
