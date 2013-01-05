@@ -38,6 +38,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
+# USB mode switch
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/usb_mode.sh:system/bin/usb_mode.sh
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/asound.conf:system/etc/asound.conf \
