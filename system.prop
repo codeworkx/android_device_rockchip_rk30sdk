@@ -6,3 +6,5 @@ ril.pppchannel=/dev/ttyUSB2
 rild.libpath=/system/lib/libril-rk29-dataonly.so
 ril.function.dataonly=1
 ro.product.usbfactory=rockchip_usb
+sys.hwc.compose_policy=6
+sys.gmali.performance=ui
