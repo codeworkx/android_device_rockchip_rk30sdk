@@ -23,10 +23,7 @@ LOCAL_PATH := device/rockchip/rk30sdk
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# This device is mdpi.
-PRODUCT_AAPT_CONFIG := xlarge mdpi
-PRODUCT_AAPT_PREF_CONFIG := mdpi
-PRODUCT_LOCALES += mdpi
+PRODUCT_AAPT_CONFIG := xlarge mdpi normal xhdpi hdpi
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=160
