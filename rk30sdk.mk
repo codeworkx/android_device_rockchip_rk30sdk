@@ -65,6 +65,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/p2p_supplicant.sh:system/bin/p2p_supplicant.sh \
+    $(LOCAL_PATH)/prebuilt/wpa_supplicant.sh:system/bin/wpa_supplicant.sh
+
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=15
