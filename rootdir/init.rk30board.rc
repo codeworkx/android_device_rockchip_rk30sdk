@@ -92,6 +92,18 @@ on boot
 # Services
 #
 
+service usbmode_adb /system/bin/usb_mode.sh 2
+    user root
+    group root
+    disabled
+    oneshot
+
+service usbmode_wifi /system/bin/usb_mode.sh 1
+    user root
+    group root
+    disabled
+    oneshot
+
 service displayd /system/bin/displayd
     class main
     socket displayd stream 0660 root system
