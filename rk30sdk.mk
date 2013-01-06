@@ -92,7 +92,8 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES := \
 	audio.a2dp.default \
-    com.android.future.usb.accessory
+    com.android.future.usb.accessory \
+    DeviceSettings
 
 # Charger
 PRODUCT_PACKAGES += \
